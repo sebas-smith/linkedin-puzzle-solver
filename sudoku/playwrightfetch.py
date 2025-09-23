@@ -36,7 +36,7 @@ with sync_playwright() as p:
     # Parse into a Python dict
     data = json.loads(decoded_json)
 
-    # print(json.dumps(data, indent = 4))
+    print(json.dumps(data, indent = 4))
 
 
     sudoku_game_puzzle = None
