@@ -1,1 +1,13 @@
-__pycache__
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Test files
+test.py
+testers.py
+
+# IDE
+.vscode/
+.idea/
