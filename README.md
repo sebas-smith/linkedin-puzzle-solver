@@ -1,15 +1,16 @@
-# LinkedIn Games Bot
+git # LinkedIn Games Bot
 
 An automated bot that solves LinkedIn's daily puzzle games using Playwright browser automation.
 
 ## Features
 
 Automatically solves all 6 LinkedIn games:
+
 - Mini Sudoku
 - Tango
 - Queens
-- Zip (Trail)
-- Pinpoint (Blueprint)
+- Zip
+- Pinpoint
 - CrossClimb
 
 ## Requirements
@@ -22,32 +23,30 @@ Automatically solves all 6 LinkedIn games:
 
 1. Clone this repository
 2. Install Playwright:
+
 ```bash
 pip install playwright
-playwright install chromium
 ```
 
 ## Usage
 
 **Basic usage (uses "Profile 1" by default):**
+
 ```bash
 python main.py
 ```
 
 **With custom Edge profile:**
+
 ```bash
 python main.py --profile "Default"
 python main.py --profile "Profile 2"
 ```
 
-**Get help:**
-```bash
-python main.py --help
-```
-
 ## How It Works
 
 The bot:
+
 1. Launches Microsoft Edge with your existing profile (maintains LinkedIn login)
 2. Opens all game pages in separate tabs
 3. Extracts puzzle solutions from hidden JSON data in the page
@@ -79,10 +78,12 @@ linkedin/
 ## Troubleshooting
 
 **Profile issues:**
+
 - Find your Edge profile name by going to `edge://version/` and looking at the "Profile Path"
 - Common profile names: "Profile 1", "Profile 2", "Default"
 
 **Edge won't launch:**
+
 - Make sure all Edge windows are closed
 - Check Task Manager for lingering Edge processes
 
