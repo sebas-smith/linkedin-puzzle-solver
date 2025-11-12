@@ -77,6 +77,10 @@ linkedin/
 
 ## Troubleshooting
 
+**Not solving**
+
+- Will only work on games which have been played a few times already and are past the "tutorial" stage
+
 **Profile issues:**
 
 - Find your Edge profile name by going to `edge://version/` and looking at the "Profile Path"
@@ -86,7 +90,6 @@ linkedin/
 
 - Make sure all Edge windows are closed
 - Check Task Manager for lingering Edge processes
-- Will only work on games which have been played a few times already and are past the "tutorial" stage
 
 ## License
 
