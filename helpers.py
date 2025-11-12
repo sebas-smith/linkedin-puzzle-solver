@@ -38,3 +38,14 @@ def get_solution_zip(page):
         return solution
     else:
         print("Could not find solution array")
+        
+def is_puzzle_completed(page, iszip = False):
+    """
+    Returns True if the puzzle is already completed (checks for the 'See results' button),
+    otherwise False.
+    """
+    
+    if iszip:
+        return page.query_selector("div._394695b9") is not None
+    
+    return page.query_selector("div.games-share-footer button") is not None

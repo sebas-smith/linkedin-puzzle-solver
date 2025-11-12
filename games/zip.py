@@ -1,14 +1,16 @@
-import time
-
+from helpers import is_puzzle_completed
 
 def fill_zip(page, solution):
-
+    
+    if is_puzzle_completed(page, iszip = True):
+        print("Zip already completed, skipping.")
+        return
+    
+    elements = []
     for idx in solution:
+        el = page.query_selector(f"[data-cell-idx='{idx}']")
+        if el:
+            elements.append(el)
 
-        selector = f"div.sudoku-cell[data-cell-idx='{idx}']"
-        cell = page.query_selector(selector)
-        if not cell:
-            continue  # cell not found, skip it
-
-        cell.click()
-        time.sleep(0.02)  # small delay to look more human
+    for el in elements:
+        el.click()
